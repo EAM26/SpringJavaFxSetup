@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eam.code.springbootjavafx.SecondViewController">
+    <content>
+        <AnchorPane prefHeight="477.0" prefWidth="591.0" styleClass="form_container" stylesheets="@../stylesheet/styles.css">
+         <children>
+            <Label layoutX="221.0" layoutY="104.0" prefHeight="35.0" prefWidth="150.0" text="Second View" />
+            <Button fx:id="btnSecViewBack" layoutX="253.0" layoutY="257.0" mnemonicParsing="false" onAction="#backToHappyView" text="Back" />
+         </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>
