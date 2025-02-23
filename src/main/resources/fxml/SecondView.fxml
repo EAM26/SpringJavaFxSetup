@@ -11,6 +11,8 @@
          <children>
             <Label layoutX="221.0" layoutY="104.0" prefHeight="35.0" prefWidth="150.0" text="Second View" />
             <Button fx:id="btnSecViewBack" layoutX="253.0" layoutY="257.0" mnemonicParsing="false" onAction="#backToHappyView" text="Back" />
+            <Button fx:id="btnSetLabel" layoutX="383.0" layoutY="257.0" mnemonicParsing="false" onAction="#setLabel" text="set label" />
+            <Label fx:id="lbName" layoutX="392.0" layoutY="206.0" prefHeight="35.0" prefWidth="100.0" />
          </children>
         </AnchorPane>
     </content>

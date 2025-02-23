@@ -5,8 +5,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -32,10 +30,7 @@ public class JavaFxApp extends Application {
 
     }
 
-    public static void setScreenToMyView() throws IOException {
-        // 1. Create FXMLLoader
-        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApp.class.getResource("/fxml/MyView.fxml"));
-
+    public static void showScreen(FXMLLoader fxmlLoader) throws IOException {
         // 2. Let Spring manage the controller
         fxmlLoader.setControllerFactory(springContext::getBean);
 
@@ -49,21 +44,17 @@ public class JavaFxApp extends Application {
         primaryStage.show();
     }
 
+    public static void setScreenToMyView() throws IOException {
+        // 1. Create FXMLLoader
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApp.class.getResource("/fxml/MyView.fxml"));
+        showScreen(fxmlLoader);
+
+    }
+
     public static void setScreenToSecondView() throws IOException {
         // 1. Create FXMLLoader
         FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApp.class.getResource("/fxml/SecondView.fxml"));
-
-        // 2. Let Spring manage the controller
-        fxmlLoader.setControllerFactory(springContext::getBean);
-
-        // 3. Load the FXML
-        Parent root = fxmlLoader.load();
-
-        // 4. Build and show the scene
-        Scene scene = new Scene(root, 600, 400);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Spring Boot + JavaFX + FXML");
-        primaryStage.show();
+        showScreen(fxmlLoader);
     }
 
     @Override
