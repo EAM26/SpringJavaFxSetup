@@ -1,0 +1,10 @@
+.title{
+
+}
+
+.form_container{
+    -fx-background-color: #EEEEEE;
+    -fx-font-size: 2em;
+    -fx-text-fill: #016A91;
+    -fx-font-weight: bold;
+}
