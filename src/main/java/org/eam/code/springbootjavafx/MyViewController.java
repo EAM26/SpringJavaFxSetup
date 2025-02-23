@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import org.springframework.stereotype.Component;
 
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 @Component // So Spring can detect and manage this bean
 public class MyViewController {
@@ -27,8 +28,9 @@ public class MyViewController {
     }
 
     @FXML
-    void showMessage() {
+    void showMessage() throws IOException {
         lbHeader.setText("Button clicked!");
+        JavaFxApp.setScreenToSecondView();
 
     }
 }

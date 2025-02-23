@@ -10,7 +10,7 @@
       <AnchorPane prefHeight="477.0" prefWidth="591.0" styleClass="form_container" stylesheets="@../stylesheet/styles.css">
          <children>
             <Button fx:id="btnClick" layoutX="263.0" layoutY="349.0" mnemonicParsing="false" onAction="#showMessage" text="Click Me!" />
-            <Label fx:id="lbHeader" layoutX="246.0" layoutY="6.0" prefHeight="57.0" prefWidth="99.0" text="This is the Test Screen" />
+            <Label fx:id="lbHeader" layoutX="200.0" layoutY="154.0" prefHeight="57.0" prefWidth="261.0" text="This is the Test Screen" />
          </children>
       </AnchorPane>
    </content>
