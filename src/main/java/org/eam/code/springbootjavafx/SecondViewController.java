@@ -9,6 +9,7 @@ import org.eam.code.springbootjavafx.Person.PersonRepository;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.List;
 
 @Component
 public class SecondViewController {
@@ -34,10 +35,12 @@ public class SecondViewController {
 
     @FXML
     void setLabel(ActionEvent event) {
-        Person person = new Person("Piet");
-        personRepository.save(person);
-        personRepository.findById(1L).ifPresent(person1 -> lbName.setText(person1.getName()));
-
+        personRepository.save(new Person("Piet"));
+        personRepository.findAll().stream()
+                .filter(p -> "Piet".equals(p.getName()))
+                .findFirst()
+                .ifPresent(p -> lbName.setText(p.getName()));
     }
+
 
 }
